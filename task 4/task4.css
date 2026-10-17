@@ -1,0 +1,225 @@
+/* Lavender + lilac + soft pink theme */
+
+:root {
+    --page-lavender: #F5F0FF;
+    --card-white: #FFFCFF;
+    --lilac: #DCCBFA;
+    --lilac-deep: #8B6BC1;
+    --pink: #F3B8D2;
+    --pink-deep: #C45B91;
+    --text-main: #453654;
+    --text-muted: #85758F;
+    --border: #E9DDF6;
+    --shadow: 0 18px 50px rgba(111, 79, 145, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(243, 184, 210, 0.42),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 88% 85%,
+            rgba(220, 203, 250, 0.75),
+            transparent 30%
+        ),
+        var(--page-lavender);
+
+    color: var(--text-main);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.counter-card {
+    width: 100%;
+    max-width: 470px;
+    position: relative;
+    overflow: hidden;
+    padding: 38px 30px 26px;
+
+    border: 1px solid rgba(220, 203, 250, 0.9);
+    border-radius: 28px;
+    background: var(--card-white);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.decorative-icon {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 16px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+    background: #FCE7F1;
+    color: var(--pink-deep);
+    font-size: 32px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: var(--lilac-deep);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+
+h1 {
+    margin: 0;
+    color: var(--text-main);
+    font-size: clamp(2rem, 8vw, 2.6rem);
+    letter-spacing: -0.04em;
+}
+
+.intro {
+    margin: 12px 0 26px;
+    color: var(--text-muted);
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+.count-panel {
+    padding: 23px 16px 20px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+
+    background: linear-gradient(
+        145deg,
+        #F4ECFF,
+        #FFF0F6
+    );
+}
+
+.count-label {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.count-number {
+    margin: 8px 0 0;
+    color: var(--lilac-deep);
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+}
+
+.count-caption {
+    display: block;
+    margin-top: 5px;
+    color: var(--pink-deep);
+    font-size: 0.85rem;
+}
+
+.button-group {
+    display: grid;
+    gap: 11px;
+    margin-top: 22px;
+}
+
+.button {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+
+    border: 1px solid transparent;
+    border-radius: 14px;
+
+    font: inherit;
+    font-size: 0.96rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--lilac-deep);
+    outline-offset: 3px;
+}
+
+.button-primary {
+    background: var(--pink);
+    color: #512744;
+    box-shadow: 0 6px 15px rgba(196, 91, 145, 0.16);
+}
+
+.button-primary:hover {
+    background: #F0A5C6;
+}
+
+.button-secondary {
+    border-color: #DCCBFA;
+    background: #EDE4FF;
+    color: #503B70;
+}
+
+.button-secondary:hover {
+    background: #E2D4FC;
+}
+
+.button-reset {
+    border-color: var(--border);
+    background: #FFFCFF;
+    color: var(--text-muted);
+}
+
+.button-reset:hover {
+    background: #F8F2FF;
+}
+
+.message {
+    min-height: 24px;
+    margin: 16px 0 0;
+    color: var(--pink-deep);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.footer-note {
+    margin: 17px 0 0;
+    color: #9B8BA5;
+    font-size: 0.78rem;
+}
+
+.footer-note span {
+    color: var(--pink-deep);
+}
+
+@media (max-width: 380px) {
+    .counter-card {
+        padding: 30px 19px 22px;
+        border-radius: 23px;
+    }
+
+    .count-number {
+        font-size: 3.8rem;
+    }
+}
